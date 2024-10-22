@@ -1,5 +1,5 @@
 def student_name(name): # Validates the name of the student
-    return all(char.isalpha() or char in ["'", " "] for char in name) and name.strip() != ""
+    return all(char.isalpha() or char in ["'", " ", "."] for char in name) and name.strip() != ""
 
 def student_grade(grade): # Validate the grade of the student
     if grade.isdigit():
@@ -64,5 +64,10 @@ if class_record:
     print(f"The student with the lowest grade is {lowest_student['name']} with a grade {lowest_student['grade']}.")
 else:
     print("No data collected.")
+
+total_grades = sum(student["grade"] for student in class_record)
+average_grade = total_grades / len(class_record)
+
+print(f"The average grade of all students is {average_grade:.2f}")
 
 
