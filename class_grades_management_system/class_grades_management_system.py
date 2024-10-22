@@ -35,7 +35,7 @@ while True:
 
     # A loop that for adding another student
     while True:
-        another = input("Do you want to add another student? Yes or No: ").strip()
+        another = input("Do you want to add another student? Yes or No: ")
         if another.lower() == "yes" or another.lower() == "no":
             if another in ["Yes", "No"]:
                 break
